@@ -1,5 +1,6 @@
-
+// helper functions
 
 export function test() {
-    console.log("something")
+    console.log("test");
 }
+

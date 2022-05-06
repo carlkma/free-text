@@ -27,10 +27,10 @@ var editor = monaco.editor.create(document.body, {
 	value: ['def hello():', '\tprint("Hello World")', ''].join('\n'),
 	language: 'python'
 });
-
-helperModule.test();
 var model = editor.getModel();
 
-var all = editor.getValue();
-var line = model.getLineContent(1);
-console.log(line)
+helperModule.test();
+
+var everything = editor.getValue();
+var single_line = model.getLineContent(1);
+console.log(single_line)
