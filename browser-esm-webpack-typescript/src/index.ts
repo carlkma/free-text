@@ -29,7 +29,13 @@ var editor = monaco.editor.create(document.body, {
 });
 var model = editor.getModel();
 
-helperModule.test();
+model.onDidChangeContent((event) => {
+	
+	var this_line = model.getLineContent(editor.getPosition().lineNumber)
+	
+	var out = helperModule.checkParenthesis(this_line);
+	console.log(out);
+  });
 
 var everything = editor.getValue();
 var single_line = model.getLineContent(1);
