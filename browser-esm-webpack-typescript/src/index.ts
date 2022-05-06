@@ -1,5 +1,6 @@
 import * as monaco from 'monaco-editor';
 import './index.css';
+import * as helperModule from './helper';
 
 // npm run build
 
@@ -22,7 +23,14 @@ self.MonacoEnvironment = {
 	}
 };
 
-monaco.editor.create(document.body, {
+var editor = monaco.editor.create(document.body, {
 	value: ['def hello():', '\tprint("Hello World")', ''].join('\n'),
 	language: 'python'
 });
+
+helperModule.test();
+var model = editor.getModel();
+
+var all = editor.getValue();
+var line = model.getLineContent(1);
+console.log(line)
