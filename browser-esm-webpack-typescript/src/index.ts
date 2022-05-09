@@ -33,7 +33,7 @@ model.onDidChangeContent((event) => {
 	
 	var this_line = model.getLineContent(editor.getPosition().lineNumber)
 	
-	var out = helperModule.checkParenthesis(this_line);
+	var out = helperModule.checkMissingColon(this_line);
 	console.log(out);
   });
 
