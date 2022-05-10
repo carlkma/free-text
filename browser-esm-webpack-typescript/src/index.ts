@@ -1,6 +1,6 @@
 import * as monaco from 'monaco-editor';
 import './index.css';
-import * as helperModule from './helper';
+//import * as helperModule from './helper';
 
 // npm run build
 
@@ -33,10 +33,13 @@ model.onDidChangeContent((event) => {
 	
 	var this_line = model.getLineContent(editor.getPosition().lineNumber)
 	
-	var out = helperModule.checkMissingColon(this_line);
-	console.log(out);
+	//var out = helperModule.checkMissingColon(this_line);
+	//console.log(out);
+	var everything = editor.getValue();
+	var single_line = model.getLineContent(1);
+	console.log(everything.split("\n"))
   });
 
 var everything = editor.getValue();
 var single_line = model.getLineContent(1);
-console.log(single_line)
+console.log(everything)
