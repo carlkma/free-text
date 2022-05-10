@@ -199,3 +199,11 @@ function checkImportStatement(line: string) {
     }
     return -1
 }
+
+module.exports = {checkMissingColon,
+    find_misplaced_colon,
+    checkIndentation,
+    checkParenthesis,
+    checkImportStatement,        
+};
+//done!
